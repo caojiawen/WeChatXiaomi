@@ -1,0 +1,67 @@
+/* pages/Search/Search.wxss */
+page{
+  background: #fafafa;
+}
+.width95{ 
+  width: 93%;
+  margin:0 auto;
+}
+.Search{
+  height: 60rpx;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15rpx auto;
+}
+.Search_content{
+  display: flex;
+  background: white;
+  width: 90%;
+  border-radius: 25rpx;
+}
+.Search_image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.search_input{
+  width: 80%;
+  height: 60rpx;
+}
+
+.hotSearch{
+  font-size: 12px;
+  margin-bottom: 80rpx;
+}
+.hotSearch_title{
+  font-size: 14px;
+  font-weight: bold;
+}
+.hotSearch image{
+  width: 100%;
+  height: 300rpx;
+  margin:20rpx 0;
+}
+
+.hotClassify{
+  display: flex;
+  flex-wrap: wrap;
+}
+.hotClassify>view{
+  background: white;
+  margin:10rpx 15rpx;
+  border-radius: 10px;
+  padding: 15rpx 0;
+}
+.hotClassify>view>text{
+  padding:0 10rpx
+}
+
+/* 搜索出的数据列表 */
+.SearchData{
+  font-size: 14px;
+}
+.SearchData_item{
+  width: 100%;
+  overflow: hidden;
+}

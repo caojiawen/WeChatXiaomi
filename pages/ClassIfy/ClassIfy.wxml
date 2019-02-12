@@ -1,0 +1,23 @@
+<view class='classIfy'>
+  <!-- 分类导航 -->
+  <scroll-view class='left_navbar' scroll-y='true'>
+   
+      <view wx:for="{{classLeft}}" bindtap='checkCurrent' class="{{index==active?'active':''}}" data-index='{{index}}' data-current='nav-{{index}}'>{{item.name}}</view>
+  </scroll-view>
+  <!--商品展示-->
+  <scroll-view class='right_goods' scroll-y='true' scroll-with-animation="true" scroll-into-view='{{toview}}'>
+    <view class='goods_list' wx:for="{{Datas}}" wx:key="{{index}}" id='nav-{{index}}' wx:for-item="itemTitle">
+      <view class='goods_title' wx:for='{{itemTitle.content}}' wx:key='unique'>
+        <view>- {{item.title}} -</view>
+        <view class='goods_content'>
+          <view wx:for="{{item.contentList}}" wx:key='unique' class='goods_item' bindtap='jumpDetail'>
+            <view style='height:80%;'>
+              <image src='{{item.img}}'></image>
+            </view>
+            <view class='name'>{{item.name}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

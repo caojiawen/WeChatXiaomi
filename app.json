@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/Index/Index",
+    "pages/Cart/Cart",
+    "pages/Detail/Detail",
+    "pages/Detail/selectGoods/selectGoods",
+    "pages/Search/Search",
+    "pages/ClassIfy/ClassIfy",
+    "pages/Me/Me",
+    "pages/Cart/CartSelect/CartSelect"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于查询当地是否有货"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff6801",
+    "navigationBarTitleText": "小米商城",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#a9b7b7",
+    "list": [
+      {
+        "pagePath": "pages/Index/Index",
+        "text": "首页",
+        "iconPath": "/assets/images/Index/tabBar/Index.png",
+        "selectedIconPath": "/assets/images/Index/tabBar/IndexSelected.png"
+      },
+      {
+        "pagePath": "pages/ClassIfy/ClassIfy",
+        "text": "分类",
+        "iconPath": "/assets/images/Index/tabBar/classIfy.png",
+        "selectedIconPath": "/assets/images/Index/tabBar/classIfySelected.png"
+      },
+      {
+        "pagePath": "pages/Cart/Cart",
+        "text": "购物车",
+        "iconPath": "/assets/images/Index/tabBar/cart.png",
+        "selectedIconPath": "/assets/images/Index/tabBar/cartSelected.png"
+      },
+      {
+        "pagePath": "pages/Me/Me",
+        "text": "我的",
+        "iconPath": "/assets/images/Index/tabBar/me.png",
+        "selectedIconPath": "/assets/images/Index/tabBar/meSelected.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,160 @@
+<!--pages/Detail/Detail.wxml-->
+<view wx:if="{{intercept2}}">该商品id为{{mid}}无后台数据，请选择小米8屏幕指纹版查看</view>
+<view wx:if="{{intercept}}">
+  <swiper style="height:410px;" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="{{indicatorActiveColor}}">
+    <block wx:for="{{banner}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src='{{item.pic}}' style='height:100%;width:375px;'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 商品简介---开始--- -->
+  <view class='Project'>
+    <view class='Project_title'>{{title[0].title}}</view>
+    <view class='Project_subtitle'>
+      <text class='discounts'>{{title[0].discounts1}}{{title[0].discounts2}}</text>
+      <text>{{title[0].subtitle}}</text>
+    </view>
+    <view class='price'>
+      <text class='newPrice'>￥{{title[0].newPrice}}</text>
+      <text class='pastPrice' wx:if="{{title[0].pastPrice}}">￥{{title[0].pastPrice}}</text>
+    </view>
+  </view>
+  <!-- 关键参数 -->
+  <scroll-view scroll-x="true" bindtap='showBox'>
+    <view class='scrollBox'>
+      <view class='scrollItem' wx:for="{{icon}}" wx:key="{{index}}">
+        <image src='{{item.pic}}' style='width:42rpx;height:42rpx'></image>
+        <view class="scrollItem_text">
+          <text>{{item.imgTitle}}</text>
+          <text>{{item.imgSub}}</text>
+        </view>
+      </view>
+    </view>
+
+  </scroll-view>
+  <!-- 商品简介---结束--- -->
+  <!-- 促销---开始 -->
+  <view class='card'>
+    <view class='card_item'>
+      <text class='card_item_title'>促销</text>
+      <view>
+        <text class='text_border'>赠品</text>
+        <text>赠米粉卡，最高含100元话费</text>
+      </view>
+      <view class='card_arrow'></view>
+    </view>
+  </view>
+  <!-- 促销---结束 -->
+  <!-- 换机---开始 -->
+  <view class='card'>
+    <view class='card_item'>
+      <text class='card_item_title'>换机</text>
+      <text style='color:orange'>高价回收，极速到账换新机</text>
+      <view class='card_arrow'></view>
+    </view>
+  </view>
+  <!-- 换机---结束 -->
+  <!-- 规格等---开始 -->
+  <view class='card'>
+    <view class='card_item bottom_border' bindtap='jumpSelectGoods'>
+      <text class='card_item_title'>已选</text>
+      <text>{{title[0].title}} {{mydata!=null?mydata.mSize:param[5].size}} {{mydata!=null?mydata.mColor:param[0].color}} x {{mydata!=null?mydata.count:1}}</text>
+      <view class='card_arrow'></view>
+    </view>
+    <view class='card_item bottom_border'>
+      <text class='card_item_title'>送至</text>
+      <text>广州市 白云区</text>
+      <view class='card_arrow'></view>
+    </view>
+    <view class='card_item'>
+      <view class='card_item_title display_flex'>
+        <view class='card_promise'>
+          <image src='/assets/images/Details/XiaoMi8/icon.png'></image>
+          <text>小米自营</text>
+        </view>
+        <view class='card_promise'>
+          <image src='/assets/images/Details/XiaoMi8/icon.png'></image>
+          <text>小米发货</text>
+        </view>
+        <view class='card_promise'>
+          <image src='/assets/images/Details/XiaoMi8/icon.png'></image>
+          <text>7天无理由退货</text>
+        </view>
+      </view>
+      <view class='card_arrow'></view>
+    </view>
+  </view>
+  <!-- 规格等---结束 -->
+  <!-- 评论---开始 -->
+  <scroll-view scroll-x="true">
+    <view class='comment'>
+      <view class='comment_card' wx:for="{{comment}}" wx:key="{{index}}">
+        <view class=" display_flex">
+          <image class='comment_card_userImg' src='{{item.userImg}}'></image>
+          <view class='comment_user'>
+            <view class='usreName'>{{item.userName}}</view>
+            <text class='time'>{{item.time}}</text>
+          </view>
+          <view class='display_flex comment_like'>
+            <image src='/assets/images/Details/XiaoMi8/like.png'></image>
+            <text>{{item.zanCount}}</text>
+          </view>
+        </view>
+        <!-- 用户评论 -->
+        <view class='comment_content'>
+          {{item.content}}
+        </view>
+        <!-- 用户评论图 -->
+        <view class='comment_img'>
+          <image src='{{item.pic}}'></image>
+          <image src='{{item.pic2}}'></image>
+        </view>
+        <!-- 官方回复 -->
+        <view class='official' wx:if="{{item.reply}}">
+          <text style='color:orange;'>官方回复：</text>
+          <text>{{item.reply}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class='display_flex more_comment'>
+    <text>更多评论</text>
+    <text class='triangle'></text>
+  </view>
+  <!-- 评论---结束 -->
+  <!-- 参数图片---开始 -->
+  <view style='margin-bottom:100rpx;'>
+    <view class='param_item' wx:for="{{paramImg}}" wx:key="{{index}}">
+      <image src='{{item.pic}}' mode="widthFix"></image>
+    </view>
+  </view>
+  <!-- 参数图片---结束 -->
+
+  <!-- 加入购物车 -->
+  <view class='add_cart'>
+    <view class='add_cart_icon' bindtap='jumpCart'>
+      <image src='/assets/images/Details/cartOff.png'></image>
+      <view class='cart_count'>{{cartCount}}</view>
+    </view>
+    <view bindtap='jumpSelectGoods' class='add_cart_text'>立即购买</view>
+  </view>
+
+  <!-- 关键参数 -->
+  <view class='box' wx:if="{{showBox==true}}">
+    <view class='keyParameter' animation="{{animationData}}">
+      <view class='KeyHeader bottomBorder'>
+        <text></text>
+        <text>关键参数</text>
+        <text class='close' bindtap='closeBox'>X</text>
+      </view>
+      <scroll-view scroll-y="true" class='scrollYClass'>
+        <view class='scrollYItem' wx:for="{{keyParameter}}" wx:key="{{index}}">
+          <text>{{item.content}}</text>
+          <text>{{item.param}}</text>
+        </view>
+      </scroll-view>
+    </view>
+    <view class='keySuccess' bindtap='closeBox'>完成</view>
+  </view>
+</view>

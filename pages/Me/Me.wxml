@@ -1,0 +1,52 @@
+<!--pages/Me/Me.wxml-->
+<view class='overHr'></view>
+<!-- 用户信息 -->
+<view class='UserInfo width90'>
+  <!-- <image class='userAvatarUrl' src='{{userInfo.avatarUrl}}'></image> -->
+  <open-data type="userAvatarUrl" class="userAvatarUrl"></open-data>
+  <view class='userTitle'>
+    <!-- <label>{{userInfo.nickName}}</label> -->
+    <open-data type="userNickName" style='color:red'></open-data>
+    <label>绑定小米账号</label>
+  </view>
+  <image class='qdcode' src='/assets/static/qdcode.png'></image>
+</view>
+<view class='overHr'></view>
+<!-- 精选店 -->
+<view class='ListClass width90'>
+  <image class='paddingImage' src='/assets/static/qian.png'></image>
+  <view>
+    <label>我的小米精选店</label>
+    <label> (内测)</label>
+  </view>
+</view>
+
+<view class='overHr'></view>
+
+<!-- 我的订单 -->
+<view class='width90 ListClass border_bottom'>
+  <image class='paddingImage' src='/assets/static/dingdan.png'></image>
+  <label>我的订单</label>
+</view>
+<!-- 会员中心 -->
+<view class='width90 ListClass border_bottom'>
+  <image class='paddingImage' src='/assets/static/huiyuan.png'></image>
+  <label>会员中心</label>
+</view>
+<!-- 我的优惠券 -->
+<view class='width90 ListClass border_bottom'>
+  <image class='paddingImage' src='/assets/static/youhuiquan.png'></image>
+  <label>我的优惠券</label>
+</view>
+<!-- 我的F码 -->
+<view class='width90 ListClass border_bottom'>
+  <image class='paddingImage' src='/assets/static/dingdan.png'></image>
+  <label>我的F码</label>
+</view>
+
+<view class='overHr'></view>
+<!-- 我的F码 -->
+<view class='width90 ListClass'>
+  <image class='paddingImage' src='/assets/static/shezhi.png'></image>
+  <label>设置</label>
+</view>

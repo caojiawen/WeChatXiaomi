@@ -1,0 +1,59 @@
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.left_navbar{
+  position: absolute;
+  left:0;
+  width:20%;
+  height: 100%;
+  font-size: 15px;
+  border-right: 2rpx solid rgba(128, 128, 128, 0.493);
+}
+.left_navbar view{
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+/* 右侧 */
+.right_goods{
+  width: 80%;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  text-align: center;
+}
+.goods_title{
+  font-size: 15px;
+  margin:10rpx 0;
+}
+.goods_content{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15rpx;
+}
+.name{
+  width: 95%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.goods_item{
+  width: 31%;
+  margin: 0 5rpx 20rpx 5rpx;
+  height: 180rpx;
+  font-size: 11px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.goods_item image{
+  width: 80%;
+  height: 100%;
+}
+
+.active{
+  color: red;
+}

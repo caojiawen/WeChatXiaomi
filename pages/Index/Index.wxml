@@ -1,0 +1,242 @@
+<!--pages/Index/Index.wxml-->
+<!-- 搜索组件---开始--- -->
+<view class='search'>
+  <view bindtap='jumpSearch'>
+    <image src='/assets/images/Index/search.png'></image>
+    <text>搜索商品</text>
+  </view>
+</view>
+<!-- 搜索组件---结束--- -->
+<!-- 轮播图组件---开始--- -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="{{indicatorActiveColor}}">
+  <block wx:for="{{BannerImg}}" wx:key="id">
+    <swiper-item>
+      <image src='{{item.pic}}' style='width:375px;height:150px;'></image>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 轮播图组件---结束--- -->
+<!-- 分类组件---结束--- -->
+<view class='classIfy'>
+  <view wx:for="{{IndexIcon}}" wx:key="id">
+    <image src='{{item.pic}}'></image>
+  </view>
+</view>
+<!-- 分类组件---结束--- -->
+<view class='overHr'></view>
+
+<!-- 推荐组件---开始 -->
+<view class='recommend'>
+  <view wx:for="{{recommend}}" wx:key="id" data-mid='{{item.mid}}' bindtap='jumpDetail'>
+    <image src='{{item.pic}}'></image>
+  </view>
+</view>
+<!-- 推荐组件---结束 -->
+<view class='overHr'></view>
+<!-- 广告1 -->
+<view class='advertising'>
+  <image src='/assets/images/Index/Advertising/advertising1.jpg'></image>
+</view>
+<view class='overHr'></view>
+
+<!-- 超值推荐---开始--- -->
+<view class='public'>
+  <view>
+    <image src='/assets/images/Index/overBalance/overbalance1.webp'></image>
+  </view>
+  <view class='publicClass'>
+    <view wx:for="{{overBalance}}" wx:key="id" data-mid='{{item.mid}}' bindtap='jumpDetail'>
+      <view style='height:360rpx'>
+        <image src='{{item.pic}}'></image>
+      </view>
+      <view class='publicClass-item'>
+        <text class='title'>{{item.title}}</text>
+        <text class='subtitle'>{{item.subtitle}}</text>
+        <view class='price'>
+          <text class='NewPrice'>￥{{item.NewPrice}}</text>
+          <text class='PastPrice' wx:if="{{item.PastPrice}}">￥{{item.PastPrice}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 超值推荐---结束--- -->
+
+<view class='overHr'></view>
+<!-- 广告2 -->
+<view class='advertising'>
+  <image src='/assets/images/Index/Advertising/advertising2.jpg'></image>
+</view>
+<view class='overHr'></view>
+
+<!-- 小米电视---开始--- -->
+<view class='public'>
+  <view>
+    <image src='/assets/images/Index/xiaoMiTV/tv1.jpg'></image>
+  </view>
+  <view class='publicClass'>
+    <view wx:for="{{xiaoMiTV}}" wx:key="id">
+      <view style='height:360rpx'>
+        <image src='{{item.pic}}'></image>
+      </view>
+      <view class='publicClass-item'>
+        <text class='title'>{{item.title}}</text>
+        <text class='subtitle'>{{item.subtitle}}</text>
+        <view class='price'>
+          <text class='NewPrice'>￥{{item.NewPrice}}</text>
+          <text class='PastPrice' wx:if="{{item.PastPrice}}">￥{{item.PastPrice}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 更多小米电视产品 -->
+<view class='publicButton'>
+  <text>更多小米电视产品></text>
+</view>
+<!-- 小米电视---结束--- -->
+
+<view class='overHr'></view>
+<!-- 广告3 -->
+<view class='advertising'>
+  <image src='/assets/images/Index/Advertising/advertising3.jpg'></image>
+</view>
+<view class='overHr'></view>
+
+<!-- 小米笔记本---开始--- -->
+<view class='public'>
+  <view>
+    <image src='/assets/images/Index/Notebook/notebook.webp'></image>
+  </view>
+  <view class='publicClass'>
+    <view wx:for="{{Notebook}}" wx:key="id">
+      <view style='height:360rpx'>
+        <image src='{{item.pic}}'></image>
+      </view>
+      <view class='publicClass-item'>
+        <text class='title'>{{item.title}}</text>
+        <text class='subtitle'>{{item.subtitle}}</text>
+        <view class='price'>
+          <text class='NewPrice'>￥{{item.NewPrice}}</text>
+          <text class='PastPrice' wx:if="{{item.PastPrice}}">￥{{item.PastPrice}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 更多小米笔记本产品 -->
+<view class='publicButton'>
+  <text>更多小米笔记本产品></text>
+</view>
+<!-- 小米笔记本---结束--- -->
+
+<view class='overHr'></view>
+<!-- 广告4 -->
+<view class='advertising'>
+  <image src='/assets/images/Index/Advertising/advertising4.webp'></image>
+</view>
+<view class='overHr'></view>
+
+<!-- 明星单品---开始--- -->
+<view class='public'>
+  <view>
+    <image src='/assets/images/Index/StarItem/starItem.jpg'></image>
+  </view>
+  <view class='publicClass'>
+    <view wx:for="{{StarItem}}" wx:key="id">
+      <view style='height:360rpx'>
+        <image src='{{item.pic}}'></image>
+      </view>
+      <view class='publicClass-item'>
+        <text class='title'>{{item.title}}</text>
+        <text class='subtitle'>{{item.subtitle}}</text>
+        <view class='price'>
+          <text class='NewPrice'>￥{{item.NewPrice}}</text>
+          <text class='PastPrice' wx:if="{{item.PastPrice}}">￥{{item.PastPrice}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 明星单品---结束--- -->
+
+<view class='overHr'></view>
+<!-- 广告5 -->
+<view class='advertising'>
+  <image src='/assets/images/Index/Advertising/advertising5.jpg'></image>
+</view>
+<view class='overHr'></view>
+
+<!-- 新品上线---开始--- -->
+<view class='public'>
+  <view>
+    <image src='/assets/images/Index/NewProject/new.webp'></image>
+  </view>
+  <view class='publicClass'>
+    <view wx:for="{{newProduct}}" wx:key="id">
+      <view style='height:360rpx'>
+        <image src='{{item.pic}}'></image>
+      </view>
+      <view class='publicClass-item'>
+        <text class='title'>{{item.title}}</text>
+        <text class='subtitle'>{{item.subtitle}}</text>
+        <view class='price'>
+          <text class='NewPrice'>￥{{item.NewPrice}}</text>
+          <text class='PastPrice' wx:if="{{item.PastPrice}}">￥{{item.PastPrice}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 更多新品 -->
+<view class='publicButton'>
+  <text>更多新品></text>
+</view>
+<!-- 明星单品---结束--- -->
+<view class='overHr'></view>
+<!-- 广告6 -->
+<view class='advertising'>
+  <image src='/assets/images/Index/Advertising/advertising6.webp'></image>
+</view>
+<view class='overHr'></view>
+<!-- 米家智能---开始--- -->
+<view class='MiAI'>
+  <view>
+    <image src='/assets/images/Index/MiAi/AI.webp'></image>
+  </view>
+  <view class='MiAiClass'>
+    <view wx:for="{{MiAI}}" wx:key="{{index}}">
+      <view>
+        <image src='{{item.pic}}'></image>
+      </view>
+      <view class='MiAiText'>
+        <text class='title'>{{item.title}}</text>
+        <text class='subtitle'>{{item.subtitle}}</text>
+        <view class='price'>
+          <text class='NewPrice'>￥{{item.NewPrice}}</text>
+          <text class='PastPrice' wx:if="{{item.PastPrice}}">￥{{item.PastPrice}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 更多米家智能产品 -->
+<view class='publicButton'>
+  <text>更多米家智能产品></text>
+</view>
+<!-- 米家智能---结束--- -->
+<view class='overHr'></view>
+
+<!-- 其他 -->
+<view class='Rests'>
+  <view wx:for="{{Rests}}" wx:key="{{index}}">
+    <image src='{{item.pic}}'></image>
+  </view>
+</view>
+
+<view class='overHr'></view>
+<!-- 了解小米 -->
+<view class='publicButton'>
+  <text>了解小米</text>
+</view>
+<view class='overHr'></view>

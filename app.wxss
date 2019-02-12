@@ -1,0 +1,137 @@
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+/* 结束块 */
+
+.overHr {
+  width: 100%;
+  height: 15rpx;
+  background: #ebebeb;
+}
+
+/* 广告样式 */
+
+.advertising {
+  width: 100%;
+  height: 300rpx;
+}
+
+.advertising>image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 图片百分百 */
+
+.Image-100 {
+  width: 100%;
+  height: 100%;
+}
+
+/* 宽度50% 居中显示 */
+
+.width95 {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* padding */
+
+.p20 {
+  padding: 20rpx;
+}
+
+.py20 {
+  padding: 20rpx 0;
+}
+
+.p30 {
+  padding: 30rpx;
+}
+
+.padding40 {
+  padding: 30rpx 40rpx;
+}
+
+.padding0 {
+  padding: 0;
+  margin: 0;
+}
+
+/* margin */
+
+.margin-right20 {
+  margin-right: 20rpx;
+}
+
+/* 下边框 */
+
+.bottomBorder {
+  border-bottom: 2rpx solid gainsboro;
+}
+
+.display_flex {
+  display: flex;
+  align-items: center;
+}
+
+.diplay_between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  background: rgb(248, 248, 248);
+  margin: 20rpx 20rpx;
+  border-radius: 20rpx;
+  border: 2rpx solid rgb(218, 217, 217);
+  font-size: 12px;
+  line-height: 1.5;
+  position: relative;
+  padding: 20rpx 0;
+}
+
+.card_item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50rpx;
+  font-size: 12px;
+}
+
+.card_item_title {
+  margin: 0 30rpx;
+  color: rgb(158, 157, 157);
+}
+
+.text_border {
+  font-size: 8px;
+  color: red;
+  border: 1px solid red;
+  padding: 0 5rpx;
+  margin-right: 8rpx;
+}
+
+/* 带边框内容 */
+
+.borderView {
+  border: 2rpx solid rgb(218, 217, 217);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+}
+
+.activeView {
+  color: #eb713c;
+  border-color: #eb713c;
+}

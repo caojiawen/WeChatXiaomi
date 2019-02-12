@@ -1,0 +1,40 @@
+<view class='main'>
+  <view class="cart_item  {{item.isTouchMove ? ' touch-move-active ' : ' '}}" wx:for="{{cartList}}" wx:key="{{index}}" bindtap='jumpCartSelect' data-mid='{{item.mid}}' data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
+    <!-- 内容 -->
+    <view class='content'>
+      <!-- 选择图标---start -->
+      <icon wx:if="{{item.selected}}" type='success' color='red' data-index='{{index}}' bindtap="selectList"></icon>
+      <icon wx:else type="circle" bindtap="selectList" data-index="{{index}}" />
+      <!-- 选择图标---end -->
+      <!-- 商品图片---start -->
+      <image class='content_pic' src='{{item.mPic}}'></image>
+      <!-- 商品图片---end -->
+      <!-- 购买参数---start -->
+      <view class='cart_content'>
+        {{item.mName}}{{item.mSize}}{{item.mColor}}
+      </view>
+      <view class='cart_Price'>
+        <text class='count'>{{item.count}}</text> x
+        <text class='price'>{{item.mPrice}}</text>
+      </view>
+      <!-- 购买参数---end -->
+    </view>
+    <!-- 删除按钮 -->
+    <view class='del' catchtap="del" data-id="{{item.id}}" data-index="{{index}}">删除</view>
+  </view>
+</view>
+
+
+
+
+<!-- 底部全选/结算按钮 -->
+<view class='footer'>
+  <view class="footerFixed display_flex">
+    <checkbox checked='{{selectAllStatus}}' bindtap="selectAll" color='orange'>全选</checkbox>
+    <view class='AllPrice display_flex'>
+      <text>合计：</text>
+      <text>{{totalPrice}}元</text>
+    </view>
+    <input class="footer_button {{button==true?'background_orange':'gray'}}" disabled='{{button}}' type='button' value='结算'></input>
+  </view>
+</view>

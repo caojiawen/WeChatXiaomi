@@ -1,0 +1,26 @@
+<!--pages/Search/Search.wxml-->
+<view class='Search width95'>
+  <view class='Search_content'>
+    <image class='Search_image' src='/assets/images/search.png'></image>
+    <input class='search_input' placeholder='搜索商品' bindinput='searchValue'></input>
+  </view>
+  <text bindtap='searchButton'>搜索</text>
+</view>
+
+<view wx:if="{{searchData.length==0 || Inputvalue==''}}">
+  <view class='hotSearch'>
+    <view class='width95 hotSearch_title'>热门搜索</view>
+    <image src='/assets/images/search_image.png'></image>
+    <view class='hotClassify'>
+      <view wx:for="{{hotClassify}}" wx:key="unique">
+        <text>{{item}}</text>
+      </view>
+    </view>
+  </view>
+  <view>{{ButtonValue}}</view>
+</view>
+<view wx:else class='SearchData'>
+  <view class='SearchData_item bottomBorder p20' wx:for="{{searchData}}" wx:key="{{index}}" bindtap='jumpDetail' data-mid='{{item.mid}}'>
+    {{item.title}}
+  </view>
+</view>

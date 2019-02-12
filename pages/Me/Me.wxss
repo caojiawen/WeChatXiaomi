@@ -1,0 +1,63 @@
+/* pages/Me/Me.wxss */
+page{
+  font-size: 15px;
+  height: 100%;
+}
+.width90{
+  width: 90%;
+  margin: 0 auto;
+}
+.paddingImage{
+  padding: 0 10rpx;
+}
+/* 用户信息---开始--- */
+.UserInfo{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.userAvatarUrl{
+  width:150rpx;
+  height: 150rpx;
+}
+.userTitle{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  line-height: 2;
+}
+.userTitle>label:first-child{
+  color: red;
+  font-size: 16px;
+}
+.userTitle>label:last-child{
+  font-size: 12px;
+  background: rgb(212, 212, 212);
+  padding: 0 15rpx;
+}
+.qdcode{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  right: 0;
+}
+/* 用户信息---结束--- */
+
+/* 列表样式---开始--- */
+.ListClass{
+  display: flex;
+  align-items: center;
+  padding:20rpx 0;
+}
+.ListClass image{
+  width: 64rpx;
+  height: 64rpx;
+}
+.ListClass>view>label:last-child{
+  font-size: 13px;
+  color: gray;
+}
+.border_bottom{
+  border-bottom: 1rpx solid rgb(189, 185, 185)
+}
+/* 列表样式---结束--- */

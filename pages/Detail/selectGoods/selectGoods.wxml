@@ -1,0 +1,72 @@
+<!--pages/Detail/selectGoods/selectGoods.wxml-->
+<view style='margin-bottom:100rpx; font-size:14px'>
+  <!-- 商品基本信息 -->
+  <view class='width95'>
+    <view class='py20 bottomBorder' style="display:flex;">
+      <image class='Image-100 goodsImage' src='{{headerPic.pic}}'></image>
+      <view class='goodsContent'>
+        <text>{{title[0].title}} {{headerTitle}} {{colorGoods}}</text>
+        <view class='goodsPrice'>
+          <text>{{headerPrice}}元</text>
+        </view>
+      </view>
+    </view>
+    <!-- 促销 -->
+    <view class='card_item py20'>
+      <text class='card_item_title'>促销</text>
+      <view>
+        <text class='text_border'>赠品</text>
+        <text>赠米粉卡，最高含100元话费</text>
+      </view>
+      <view class='card_arrow'></view>
+    </view>
+  </view>
+  <view class='overHr'></view>
+  <!-- 版本选择 -->
+  <view class='py20 width95 bottomBorder'>
+    <text class='card_item_title'>版本</text>
+    <view wx:for="{{product}}" wx:key="{{index}}" class='borderView p30 {{_num==index?"activeView":""}}' data-title="{{item.size}}" data-price="{{item.price}}" data-num="{{index}}" catchtap="menuClick">
+      <text>{{item.size}}</text>
+      <text>{{item.price}}</text>
+    </view>
+  </view>
+  <!-- 颜色选择 -->
+  <view class='py20 width95 bottomBorder'>
+    <text class='card_item_title'>颜色</text>
+    <view class="display_flex ColorSelect">
+      <view wx:for="{{color}}" wx:key="{{index}}" wx:if="{{item.color!=null}}"  class='borderView {{__num==index?"activeView":""}} padding40' data-colorGoods="{{item.color}}" data-num="{{index}}" catchtap="colorClick">{{item.color}}</view>
+    </view>
+  </view>
+  <!-- 购买数量 -->
+  <view class='py20 width95 bottomBorder diplay_between' style='align-items:center'>
+    <text class='card_item_title'>购买数量</text>
+    <view class='buyNum display_flex'>
+      <input value='-' disabled bindtap='subtractNumber'></input>
+      <input value='{{buyNumber}}' type='number' bindinput='getBuyValue'></input>
+      <input value='+' disabled bindtap='addNumber'></input>
+    </view>
+  </view>
+  <!-- 意外保护 -->
+  <view class='py20 width95 bottomBorder'>
+    <text class='card_item_title'>意外保护</text>
+    <view class='diplay_between insurance'>
+      <view wx:for="{{accident}}" wx:key="{{index}}" class='borderView p20  diplay_between {{insuranceIndex==index? "activeView" : ""}}' data-insurance="{{index}}" bindtap="insurance">
+        <text>{{item.accidentName}}</text>
+        <text>{{item.accidentPrice}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 延长保修 -->
+  <view class='py20 width95'>
+    <text class='card_item_title'>延长保修</text>
+    <view class='diplay_between insurance'>
+      <view wx:for="{{prolong}}" wx:key="{{index}}" class='borderView p20 diplay_between {{warrantyIndex==index?"activeView":""}}' data-warranty="{{index}}" bindtap='warranty'>
+        <text>{{item.prolongName}}</text>
+        <text>{{item.prolongPrice}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='overHr'></view>
+</view>
+
+<view class='confirmButton' bindtap='addCart'>确定</view>

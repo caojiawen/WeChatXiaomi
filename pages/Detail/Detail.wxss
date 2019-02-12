@@ -1,0 +1,311 @@
+/* pages/Detail/Detail.wxss */
+
+.Project {
+  font-size: 12px;
+  margin: 40rpx 0 0 20rpx;
+}
+
+.Project_title {
+  font-size: 16px;
+  margin: 10rpx 0;
+}
+
+.discounts{
+  color: red;
+}
+
+.price {
+  margin: 10rpx 0;
+}
+
+.newPrice {
+  font-size: 16px;
+  color: red;
+}
+
+.pastPrice {
+  font-size: 11px;
+  text-decoration: line-through;
+  color: gray;
+  margin-left: 20rpx;
+}
+
+/* 关键参数 */
+
+.scrollBox {
+  display: flex;
+  width: 820px;
+}
+
+.scrollItem {
+  width: 172rpx;
+  text-align: center;
+  border-right: 1px solid rgb(228, 228, 228);
+}
+
+.scrollItem:last-child {
+  border-right: 0;
+}
+
+.scrollItem_text {
+  display: flex;
+  flex-direction: column;
+}
+
+.scrollItem_text>text:first-child {
+  font-size: 13px;
+}
+
+.scrollItem_text>text:last-child {
+  font-size: 10px;
+  color: gray;
+}
+
+/* 促销 */
+
+.card_arrow {
+  border: 4rpx solid rgb(172, 172, 172);
+  border-left: 0;
+  border-top: 0;
+  height: 30rpx;
+  width: 30rpx;
+  transform: rotate(-45deg);
+  position: absolute;
+  right: 30rpx;
+}
+
+.bottom_border {
+  border-bottom: 2rpx solid rgb(218, 217, 217);
+  padding: 20rpx 0;
+}
+
+.card_promise {
+  font-size: 10px;
+  margin-top: 15rpx;
+}
+
+.card_promise>image {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  margin: 0 10rpx;
+}
+
+/* 评论 */
+
+.comment {
+  display: flex;
+  width: 3000rpx;
+  margin: 20rpx 20rpx;
+}
+
+.comment_card {
+  width: 580rpx;
+  background: rgb(248, 248, 248);
+  margin-right: 20rpx;
+  border-radius: 20rpx;
+  border: 2rpx solid rgb(218, 217, 217);
+  padding: 30rpx;
+  position: relative;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.comment_card_userImg {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.time {
+  font-size: 11px;
+  color: rgb(175, 174, 174);
+}
+
+.comment_like {
+  font-size: 13px;
+  color: rgb(175, 174, 174);
+  position: absolute;
+  right: 20rpx;
+  top: 40rpx;
+}
+
+.comment_like>image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 15rpx;
+  vertical-align: middle;
+}
+
+.comment_content {
+  margin: 12rpx 0;
+  height: 35px;
+  overflow: hidden;
+}
+
+.comment_img {
+  height: 60px;
+  margin: 20rpx 0;
+}
+
+.comment_img image {
+  height: 100%;
+  width: 30%;
+  border-radius: 20rpx;
+  margin-right: 15rpx;
+}
+
+/* 查看更多 */
+
+.more_comment {
+  color: rgb(75, 75, 248);
+  margin: 30rpx 0 60rpx 0;
+  justify-content: center;
+}
+
+/* 小三角形 */
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid rgb(75, 75, 248);
+  display: block;
+  transform: rotate(90deg);
+}
+
+/* 参数图片 */
+
+.param_item {
+  width: 100%;
+  padding: 0;
+  margin-top: -4px;
+}
+
+.param_item image {
+  width: 100%;
+}
+
+/* 加入购物车 */
+
+.add_cart {
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+}
+
+.add_cart_icon {
+  background: white;
+  height: 100%;
+  width: 16%;
+  text-align: center;
+  position: relative;
+}
+
+.add_cart image {
+  margin-top: 20rpx;
+  height: 60rpx;
+  width: 60rpx;
+}
+
+.add_cart_text {
+  width: 84%;
+  background: #ff6902;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart_count{
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 关键参数 */
+
+.box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.keyParameter {
+  background: white;
+  border: 1px solid gainsboro;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  padding: 0 30rpx;
+}
+
+/* 关键参数头部 */
+
+.KeyHeader {
+  text-align: center;
+  position: relative;
+  font-size: 18px;
+  padding: 20rpx 30rpx;
+  width: 88%;
+  margin: 0 auto;
+}
+
+.close {
+  float: right;
+  display: block;
+  margin-right: 20rpx;
+}
+
+.scrollYClass {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20rpx;
+  font-size: 14px;
+}
+.scrollYItem{
+  display: flex;
+  position: relative;
+  margin-top:50rpx;
+}
+.scrollYItem>text:first-child{
+  color: gray;
+}
+.scrollYItem>text:last-child{
+  position: absolute;
+  left: 250rpx;
+}
+.keySuccess{
+  position: fixed;
+  bottom: 0;
+  height: 100rpx;
+  background: #ff6902;
+  color: white;
+  width: 100%;
+  border-radius: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

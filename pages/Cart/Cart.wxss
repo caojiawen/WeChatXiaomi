@@ -1,0 +1,144 @@
+page {
+  background: rgb(238, 238, 238);
+  font-size: 14px;
+}
+
+
+.main {
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-bottom: 10rpx;
+  margin-bottom: 100rpx;
+}
+
+.cart_item {
+  display: flex;
+  overflow: hidden;
+  border-bottom: 2rpx solid rgb(207, 206, 206);
+  font-size: 13px;
+}
+.content{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  margin-right: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+  margin-left: -90px;
+}
+.content_pic{
+  width: 100rpx;
+  height: 100rpx;
+  margin:0 20rpx;
+}
+.cart_content{
+  width: 75%;
+  margin-right: 5px
+}
+.cart_Price{
+  display: flex;
+  color: rgb(182, 182, 182);
+}
+
+.price{
+  color:red;
+  font-size: 14px;
+}
+
+
+
+.del {
+  background-color: #c00;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.touch-move-active .content, .touch-move-active .del {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+
+
+
+
+
+
+
+
+.background_orange {
+  background: orange;
+}
+
+checkbox .wx-checkbox-input {
+  border-radius: 50%; /* 圆角 */
+  width: 40rpx; /* 背景的宽 */
+  height: 40rpx; /* 背景的高 */
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  border-radius: 50%; /* 圆角 */
+  width: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 30rpx; /* 对勾大小 30rpx */
+  color: #fff; /* 对勾颜色 白色 */
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: red;
+}
+
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 14px;
+  border: 2rpx solid rgb(248, 248, 248);
+  background: white;
+}
+
+.footerFixed {
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.AllPrice {
+  text-align: right;
+  margin-left: 60px;
+}
+
+.AllPrice>text:last-child {
+  color: red;
+}
+
+.footer_button {
+  width: 200rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.gray {
+  background: rgba(199, 199, 199, 0.801);
+}
+

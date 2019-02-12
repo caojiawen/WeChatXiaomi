@@ -1,0 +1,197 @@
+/* pages/Index/Index.wxss */
+
+/* 搜索组件样式---开始--- */
+
+.search {
+  background: #ff6801;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.search>view {
+  font-size: 13px;
+  background: white;
+  width: 80%;
+  height: 50rpx;
+  border-radius: 20rpx;
+  text-align: center;
+}
+
+.search>view>image {
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}
+
+/* 搜索组件样式---结束--- */
+
+/* 商品分类样式---开始--- */
+
+.classIfy {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.classIfy>view {
+  width: 20%;
+  height: 150rpx;
+}
+
+.classIfy>view>image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 商品分类样式---结束--- */
+
+/* 推荐模块样式---开始--- */
+
+.recommend {
+  height: 700rpx;
+}
+
+.recommend>view {
+  width: 50%;
+  height: 50%;
+  box-sizing: border-box;
+  border: 4rpx solid white;
+  float: left;
+  border-right: 0;
+}
+
+.recommend>view>image {
+  width: 100%;
+  height: 100%;
+}
+
+.recommend>view:first-child {
+  height: 100%;
+  border-left: 0;
+}
+
+/* 推荐模块样式---结束--- */
+
+/* 模块样式---开始--- */
+
+.public>view:first-child>image {
+  width: 100%;
+}
+
+.publicClass {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.publicClass>view {
+  width: 49.6%;
+  margin-top: -9rpx;
+}
+
+.publicClass>view image {
+  width: 100%;
+  height: 100%;
+}
+
+.publicClass-item {
+  height: 160rpx;
+  font-size: 13PX;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20rpx;
+}
+
+.publicButton {
+  border-top: 2rpx solid rgba(128, 128, 128, 0.322);
+  text-align: center;
+  font-size: 15px;
+  color: rgba(128, 128, 128, 0.659);
+  line-height: 3;
+}
+/* 标题 */
+.title {
+  font-size: 15px;
+  width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* 副标题 */
+.subtitle {
+  color: gray;
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* 价格 */
+.price{
+  font-size: 13px;
+}
+.NewPrice {
+  margin-right: 10rpx;
+  color: red;
+}
+.PastPrice {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* 模块样式---结束--- */
+
+/* 米家智能样式---开始--- */
+
+.MiAI>view:first-child>image {
+  width: 100%;
+}
+.MiAiClass image{
+  width:375rpx;
+  height: 360rpx;
+}
+.MiAiClass>view{
+  display: flex;
+  height:360rpx;
+}
+.MiAiClass>view>view{
+  width: 50%;
+}
+.MiAiText{
+  display: flex;
+  flex-direction: column;
+  padding:40rpx 30rpx 40rpx 30rpx;
+  line-height: 2;
+  box-sizing: border-box;
+}
+/* 第二个view内容位置互换 */
+.MiAiClass>view:nth-child(2){
+  position: relative;
+}
+.MiAiClass>view:nth-child(2)>view:first-child{
+  position: absolute;
+  right: 0;
+  top:0;
+}
+.MiAiClass>view:nth-child(2)>view:last-child{
+  position: absolute;
+  left: 0;
+  top:0;
+  width:375rpx;
+}
+/* 米家智能样式---结束--- */
+
+/* 其他样式 */
+.Rests{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.Rests>view{
+  width:49.5%;
+}
+.Rests image{
+  width:100%;
+}
